@@ -28,24 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            btnAutoS = new Button();
+            successAuto = new Label();
             SuspendLayout();
             // 
-            // label1
+            // btnAutoS
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(304, 123);
-            label1.Name = "label1";
-            label1.Size = new Size(58, 30);
-            label1.TabIndex = 0;
-            label1.Text = "Auto";
+            btnAutoS.Location = new Point(261, 143);
+            btnAutoS.MinimumSize = new Size(50, 50);
+            btnAutoS.Name = "btnAutoS";
+            btnAutoS.Size = new Size(170, 82);
+            btnAutoS.TabIndex = 1;
+            btnAutoS.Text = "Add auto student";
+            btnAutoS.UseVisualStyleBackColor = true;
+            btnAutoS.Click += button1_Click;
+            // 
+            // successAuto
+            // 
+            successAuto.AutoSize = true;
+            successAuto.Location = new Point(192, 257);
+            successAuto.MinimumSize = new Size(300, 50);
+            successAuto.Name = "successAuto";
+            successAuto.Size = new Size(300, 50);
+            successAuto.TabIndex = 2;
             // 
             // UC_AutoAddition
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(label1);
+            Controls.Add(successAuto);
+            Controls.Add(btnAutoS);
+            MinimumSize = new Size(500, 100);
             Name = "UC_AutoAddition";
             Size = new Size(699, 396);
             ResumeLayout(false);
@@ -54,6 +67,8 @@
 
         #endregion
 
-        private Label label1;
+        private Label buga;
+        private Button btnAutoS;
+        private Label successAuto;
     }
 }

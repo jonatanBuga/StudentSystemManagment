@@ -4,13 +4,13 @@ namespace StudentSystemManagment
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
             UC_AddStudent uc = new UC_AddStudent();
             addusercontrol(uc);
         }
-
         private void MainPanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -51,6 +51,7 @@ namespace StudentSystemManagment
         {
             UC_AddStudent uc = new UC_AddStudent();
             addusercontrol(uc);
-        }
+        } 
+
     }
 }

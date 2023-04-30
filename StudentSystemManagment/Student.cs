@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StudentSystemManagment
 {
-    internal class Student
+    public class Student
     {
         private object validId;
 
@@ -47,9 +47,16 @@ namespace StudentSystemManagment
             return sum / Grades.Count;
         }
 
-        public void AddGrade(string course, float grade = 777)
+        public void AddGrade(string course, string grade)
         {
-            Grades[course] = grade;
+            if (grade == "" || grade == null)
+            {
+                Grades[course] = 777;
+            }
+            else
+            {
+                Grades[course] = float.Parse(grade);
+            }
         }
         public void PrintInfo()
         {

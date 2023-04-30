@@ -49,6 +49,10 @@
             Course1Text = new TextBox();
             label12 = new Label();
             btnSubmit = new Button();
+            validID = new Label();
+            validEmail = new Label();
+            validPhone = new Label();
+            validCourse = new Label();
             SuspendLayout();
             // 
             // label1
@@ -238,10 +242,54 @@
             btnSubmit.UseVisualStyleBackColor = false;
             btnSubmit.Click += btnSubmit_Click;
             // 
+            // validID
+            // 
+            validID.AutoSize = true;
+            validID.ForeColor = Color.Red;
+            validID.Location = new Point(207, 199);
+            validID.MinimumSize = new Size(100, 0);
+            validID.Name = "validID";
+            validID.Size = new Size(100, 15);
+            validID.TabIndex = 24;
+            // 
+            // validEmail
+            // 
+            validEmail.AutoSize = true;
+            validEmail.ForeColor = Color.Red;
+            validEmail.Location = new Point(209, 260);
+            validEmail.MinimumSize = new Size(100, 0);
+            validEmail.Name = "validEmail";
+            validEmail.Size = new Size(100, 15);
+            validEmail.TabIndex = 25;
+            // 
+            // validPhone
+            // 
+            validPhone.AutoSize = true;
+            validPhone.ForeColor = Color.Red;
+            validPhone.Location = new Point(209, 318);
+            validPhone.MinimumSize = new Size(100, 0);
+            validPhone.Name = "validPhone";
+            validPhone.Size = new Size(100, 15);
+            validPhone.TabIndex = 26;
+            // 
+            // validCourse
+            // 
+            validCourse.AutoSize = true;
+            validCourse.ForeColor = Color.Red;
+            validCourse.Location = new Point(536, 318);
+            validCourse.MinimumSize = new Size(100, 0);
+            validCourse.Name = "validCourse";
+            validCourse.Size = new Size(100, 15);
+            validCourse.TabIndex = 27;
+            // 
             // UC_AddStudent
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(validCourse);
+            Controls.Add(validPhone);
+            Controls.Add(validEmail);
+            Controls.Add(validID);
             Controls.Add(btnSubmit);
             Controls.Add(Course5Text);
             Controls.Add(label8);
@@ -292,5 +340,9 @@
         private TextBox Course1Text;
         private Label label12;
         private Button btnSubmit;
+        private Label validID;
+        private Label validEmail;
+        private Label validPhone;
+        private Label validCourse;
     }
 }
