@@ -46,11 +46,12 @@
             // successAuto
             // 
             successAuto.AutoSize = true;
-            successAuto.Location = new Point(192, 257);
-            successAuto.MinimumSize = new Size(300, 50);
+            successAuto.Location = new Point(24, 228);
+            successAuto.MinimumSize = new Size(500, 150);
             successAuto.Name = "successAuto";
-            successAuto.Size = new Size(300, 50);
+            successAuto.Size = new Size(500, 150);
             successAuto.TabIndex = 2;
+            successAuto.Click += successAuto_Click;
             // 
             // UC_AutoAddition
             // 
