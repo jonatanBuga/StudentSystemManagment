@@ -14,6 +14,7 @@ namespace StudentSystemManagment
         {
             students.Add(student);  
         }
+        public static List <Student> GetStudents() { return students; }
         public static void bubbleSort()
         {
             for (int i = 0; i < students.Count - 1; i++)

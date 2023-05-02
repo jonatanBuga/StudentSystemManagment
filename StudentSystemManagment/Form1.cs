@@ -4,12 +4,11 @@ namespace StudentSystemManagment
 {
     public partial class Form1 : Form
     {
-
+        UC_Report ucR = new UC_Report();
         public Form1()
         {
             InitializeComponent();
-            UC_AddStudent uc = new UC_AddStudent();
-            addusercontrol(uc);
+            
         }
         private void MainPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -30,13 +29,15 @@ namespace StudentSystemManagment
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            UC_Report uc = new UC_Report();
-            addusercontrol(uc);
+
+            
+            addusercontrol(ucR);
+            
         }
 
         private void btnAuto_Click(object sender, EventArgs e)
         {
-            UC_AutoAddition uc = new UC_AutoAddition();
+            UC_AutoAddition uc = new UC_AutoAddition(ucR);
             addusercontrol(uc);
         }
         private void addusercontrol(UserControl usercontrol)
@@ -49,8 +50,9 @@ namespace StudentSystemManagment
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            UC_AddStudent uc = new UC_AddStudent();
-            addusercontrol(uc);
+
+            UC_AddStudent ucS = new UC_AddStudent(ucR);
+            addusercontrol(ucS);
         } 
 
     }

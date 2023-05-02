@@ -12,6 +12,7 @@ namespace StudentSystemManagment.UserCotrollers
 {
     public partial class UC_AutoAddition : UserControl
     {
+        UC_Report table = new UC_Report();
         string[] names = new string[30]
         {
         "Alice",
@@ -46,9 +47,10 @@ namespace StudentSystemManagment.UserCotrollers
         "Daniel"
         };
 
-        public UC_AutoAddition()
+        public UC_AutoAddition(UC_Report reportTable)
         {
             InitializeComponent();
+            table = reportTable;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -74,7 +76,9 @@ namespace StudentSystemManagment.UserCotrollers
                 StudentManager.AddStudent(student);
                 n--;
             }
-            successAuto.Text = "" + StudentManager.students.Count;
+            successAuto.Text = "" + StudentManager.students.Count+",add seccsesfuly! ";
+            table.SetDataGridView(StudentManager.GetStudents());
+            
         }
     }
 }
