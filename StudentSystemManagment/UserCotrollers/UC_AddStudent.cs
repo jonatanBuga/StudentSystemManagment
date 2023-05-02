@@ -17,9 +17,11 @@ namespace StudentSystemManagment.UserCotrollers
     public partial class UC_AddStudent : UserControl
     {
 
-        public UC_AddStudent()
+        UC_Report table = new UC_Report();  
+        public UC_AddStudent(UC_Report reportTable)
         {
             InitializeComponent();
+            table = reportTable;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -54,7 +56,7 @@ namespace StudentSystemManagment.UserCotrollers
             validID.Text = "";
             validPhone.Text = "";
             validCourse.Text = "";
-
+            
             if (!string.IsNullOrEmpty(IDText.Text) && !string.IsNullOrEmpty(EmailText.Text) && !string.IsNullOrEmpty(PhoneNumberText.Text)
                 && !string.IsNullOrEmpty(FirstNameText.Text) && !string.IsNullOrEmpty(LastNameText.Text))
             {
@@ -63,7 +65,8 @@ namespace StudentSystemManagment.UserCotrollers
                     Student student = new Student(FirstNameText.Text, LastNameText.Text, IDText.Text, EmailText.Text, PhoneNumberText.Text);
                     if (IsValidGrade(Course1Text.Text, "Course 1", student) && IsValidGrade(Course2Text.Text, "Course 2", student) && IsValidGrade(Course3Text.Text, "Course 3", student) && IsValidGrade(Course4Text.Text, "Course 4", student) && IsValidGrade(Course5Text.Text, "Course 5", student))
                     {
-                        StudentManager.AddStudent (student);
+                        StudentManager.AddStudent(student);
+                        table.SetDataGridView(StudentManager.GetStudents());
                         FirstNameText.Text = "";
                         LastNameText.Text = "";
                         IDText.Text = "";
@@ -75,7 +78,7 @@ namespace StudentSystemManagment.UserCotrollers
                         Course4Text.Text = "";
                         Course5Text.Text = "";
                     }
-                    // Clear the contents of the text boxes
+                    
 
                 }
             }

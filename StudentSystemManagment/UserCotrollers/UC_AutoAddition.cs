@@ -12,6 +12,7 @@ namespace StudentSystemManagment.UserCotrollers
 {
     public partial class UC_AutoAddition : UserControl
     {
+        UC_Report table = new UC_Report();
         string[] names = new string[30]
         {
         "Alice",
@@ -46,9 +47,10 @@ namespace StudentSystemManagment.UserCotrollers
         "Daniel"
         };
 
-        public UC_AutoAddition()
+        public UC_AutoAddition(UC_Report reportTable)
         {
             InitializeComponent();
+            table = reportTable;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -62,11 +64,11 @@ namespace StudentSystemManagment.UserCotrollers
             {
                 int index1 = random.Next(0, 30);
                 int index2 = random.Next(0, 30);
-                string id = "" + random.Next(100000000, 999999999);
-                string phone = "" + random.Next(10000000, 99999999);
+                string id = "" + random.Next(100000000,999999999);
+                string phone = "" + random.Next(10000000,99999999);
 
-                Student student = new Student(names[index1], names[index2], id, names[index1] + "@gmail.com", "05" + phone);
-                student.AddGrade("course1", "" + random.Next(0, 100));
+                Student student = new Student(names[index1], names[index2], id, names[index1]+"@gmail.com", "05"+phone);
+                student.AddGrade("course1",""+random.Next(0,100));
                 student.AddGrade("course2", "" + random.Next(0, 100));
                 student.AddGrade("course3", "" + random.Next(0, 100));
                 student.AddGrade("course4", "" + random.Next(0, 100));
@@ -74,19 +76,9 @@ namespace StudentSystemManagment.UserCotrollers
                 StudentManager.AddStudent(student);
                 n--;
             }
-
-            StudentManager.students= StudentManager.Sort(StudentManager.students); 
-            successAuto.Text = "" + StudentManager.students.Count;
-        }
-
-        private void successAuto_Click(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            successAuto.Text = "" + StudentManager.students.Count+",add seccsesfuly! ";
+            table.SetDataGridView(StudentManager.GetStudents());
+            
         }
     }
 }

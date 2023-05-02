@@ -35,14 +35,14 @@
             ID = new DataGridViewTextBoxColumn();
             PhoneNumber = new DataGridViewTextBoxColumn();
             Email = new DataGridViewTextBoxColumn();
-            GAP = new DataGridViewTextBoxColumn();
+            GPA = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { FirstName, LastName, ID, PhoneNumber, Email, GAP });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { FirstName, LastName, ID, PhoneNumber, Email, GPA });
             dataGridView1.Location = new Point(3, 3);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
@@ -80,11 +80,11 @@
             Email.Name = "Email";
             Email.Width = 135;
             // 
-            // GAP
+            // GPA
             // 
-            GAP.HeaderText = "GAP";
-            GAP.Name = "GAP";
-            GAP.Width = 65;
+            GPA.HeaderText = "GPA";
+            GPA.Name = "GPA";
+            GPA.Width = 65;
             // 
             // UC_Report
             // 
@@ -106,6 +106,6 @@
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn PhoneNumber;
         private DataGridViewTextBoxColumn Email;
-        private DataGridViewTextBoxColumn GAP;
+        private DataGridViewTextBoxColumn GPA;
     }
 }
