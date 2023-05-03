@@ -10,14 +10,14 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Serialization; 
+using System.Xml.Serialization;
 
 namespace StudentSystemManagment.UserCotrollers
 {
     public partial class UC_AddStudent : UserControl
     {
 
-        UC_Report table = new UC_Report();  
+        UC_Report table = new UC_Report();
         public UC_AddStudent(UC_Report reportTable)
         {
             InitializeComponent();
@@ -56,7 +56,7 @@ namespace StudentSystemManagment.UserCotrollers
             validID.Text = "";
             validPhone.Text = "";
             validCourse.Text = "";
-            
+
             if (!string.IsNullOrEmpty(IDText.Text) && !string.IsNullOrEmpty(EmailText.Text) && !string.IsNullOrEmpty(PhoneNumberText.Text)
                 && !string.IsNullOrEmpty(FirstNameText.Text) && !string.IsNullOrEmpty(LastNameText.Text))
             {
@@ -78,7 +78,7 @@ namespace StudentSystemManagment.UserCotrollers
                         Course4Text.Text = "";
                         Course5Text.Text = "";
                     }
-                    
+
 
                 }
             }

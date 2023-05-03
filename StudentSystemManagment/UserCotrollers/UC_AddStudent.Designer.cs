@@ -231,7 +231,7 @@
             // 
             // btnSubmit
             // 
-            btnSubmit.BackColor = Color.DarkSlateBlue;
+            btnSubmit.BackColor = Color.RoyalBlue;
             btnSubmit.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnSubmit.ForeColor = Color.White;
             btnSubmit.Location = new Point(292, 338);
@@ -286,6 +286,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.AliceBlue;
+            BackgroundImageLayout = ImageLayout.Zoom;
             Controls.Add(validCourse);
             Controls.Add(validPhone);
             Controls.Add(validEmail);
@@ -311,8 +313,9 @@
             Controls.Add(label2);
             Controls.Add(FirstNameText);
             Controls.Add(label1);
+            DoubleBuffered = true;
             Name = "UC_AddStudent";
-            Size = new Size(699, 396);
+            Size = new Size(715, 600);
             ResumeLayout(false);
             PerformLayout();
         }

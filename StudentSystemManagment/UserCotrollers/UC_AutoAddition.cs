@@ -64,11 +64,11 @@ namespace StudentSystemManagment.UserCotrollers
             {
                 int index1 = random.Next(0, 30);
                 int index2 = random.Next(0, 30);
-                string id = "" + random.Next(100000000,999999999);
-                string phone = "" + random.Next(10000000,99999999);
+                string id = "" + random.Next(100000000, 999999999);
+                string phone = "" + random.Next(10000000, 99999999);
 
-                Student student = new Student(names[index1], names[index2], id, names[index1]+"@gmail.com", "05"+phone);
-                student.AddGrade("course1",""+random.Next(0,100));
+                Student student = new Student(names[index1], names[index2], id, names[index1] + "@gmail.com", "05" + phone);
+                student.AddGrade("course1", "" + random.Next(0, 100));
                 student.AddGrade("course2", "" + random.Next(0, 100));
                 student.AddGrade("course3", "" + random.Next(0, 100));
                 student.AddGrade("course4", "" + random.Next(0, 100));
@@ -76,9 +76,14 @@ namespace StudentSystemManagment.UserCotrollers
                 StudentManager.AddStudent(student);
                 n--;
             }
-            successAuto.Text = "" + StudentManager.students.Count+",add seccsesfuly! ";
+            successAuto.Text = "" + StudentManager.students.Count + ",add seccsesfuly! ";
             table.SetDataGridView(StudentManager.GetStudents());
-            
+
+        }
+
+        private void UC_AutoAddition_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

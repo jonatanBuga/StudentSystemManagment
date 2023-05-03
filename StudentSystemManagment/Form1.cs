@@ -8,7 +8,7 @@ namespace StudentSystemManagment
         public Form1()
         {
             InitializeComponent();
-            
+
         }
         private void MainPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -30,9 +30,9 @@ namespace StudentSystemManagment
         private void btnReport_Click(object sender, EventArgs e)
         {
 
-            
+
             addusercontrol(ucR);
-            
+
         }
 
         private void btnAuto_Click(object sender, EventArgs e)
@@ -53,7 +53,7 @@ namespace StudentSystemManagment
 
             UC_AddStudent ucS = new UC_AddStudent(ucR);
             addusercontrol(ucS);
-        } 
+        }
 
     }
 }

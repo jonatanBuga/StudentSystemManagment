@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jonatan\\Desktop\\StudentSystemManagment\\StudentSystemManagment\\StudentSystemManagment.csproj": {}
+    "C:\\Users\\Osnat\\Desktop\\StudentSystemManagment\\StudentSystemManagment\\StudentSystemManagment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jonatan\\Desktop\\StudentSystemManagment\\StudentSystemManagment\\StudentSystemManagment.csproj": {
+    "C:\\Users\\Osnat\\Desktop\\StudentSystemManagment\\StudentSystemManagment\\StudentSystemManagment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jonatan\\Desktop\\StudentSystemManagment\\StudentSystemManagment\\StudentSystemManagment.csproj",
+        "projectUniqueName": "C:\\Users\\Osnat\\Desktop\\StudentSystemManagment\\StudentSystemManagment\\StudentSystemManagment.csproj",
         "projectName": "StudentSystemManagment",
-        "projectPath": "C:\\Users\\Jonatan\\Desktop\\StudentSystemManagment\\StudentSystemManagment\\StudentSystemManagment.csproj",
-        "packagesPath": "C:\\Users\\Jonatan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jonatan\\Desktop\\StudentSystemManagment\\StudentSystemManagment\\obj\\",
+        "projectPath": "C:\\Users\\Osnat\\Desktop\\StudentSystemManagment\\StudentSystemManagment\\StudentSystemManagment.csproj",
+        "packagesPath": "C:\\Users\\Osnat\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Osnat\\Desktop\\StudentSystemManagment\\StudentSystemManagment\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jonatan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Osnat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

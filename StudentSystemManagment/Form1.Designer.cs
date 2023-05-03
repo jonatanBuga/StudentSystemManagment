@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            PictureBox pictureBox1;
             panel1 = new Panel();
             label1 = new Label();
             ButtonPanel = new Panel();
@@ -35,18 +36,35 @@
             btnAuto = new Button();
             btnAdd = new Button();
             MainPanel = new Panel();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             ButtonPanel.SuspendLayout();
+            MainPanel.SuspendLayout();
             SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.AccessibleRole = AccessibleRole.Clock;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Image = Properties.Resources.PastedGraphic_1__3_;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(696, 384);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.DarkSlateBlue;
+            panel1.BackColor = Color.GhostWhite;
+            panel1.BackgroundImage = Properties.Resources.PastedGraphic_11;
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(699, 71);
+            panel1.Size = new Size(699, 79);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -57,9 +75,8 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(218, 21);
             label1.Name = "label1";
-            label1.Size = new Size(250, 22);
+            label1.Size = new Size(0, 22);
             label1.TabIndex = 0;
-            label1.Text = "Student System Managment";
             label1.Click += label1_Click;
             // 
             // ButtonPanel
@@ -68,51 +85,57 @@
             ButtonPanel.Controls.Add(btnAuto);
             ButtonPanel.Controls.Add(btnAdd);
             ButtonPanel.Dock = DockStyle.Top;
-            ButtonPanel.Location = new Point(0, 71);
+            ButtonPanel.Location = new Point(0, 79);
             ButtonPanel.Name = "ButtonPanel";
-            ButtonPanel.Size = new Size(699, 59);
+            ButtonPanel.Size = new Size(699, 100);
             ButtonPanel.TabIndex = 1;
             ButtonPanel.Paint += ButtonPanel_Paint;
             // 
             // btnReport
             // 
+            btnReport.BackgroundImage = Properties.Resources.report;
+            btnReport.BackgroundImageLayout = ImageLayout.Stretch;
             btnReport.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnReport.Location = new Point(480, 0);
+            btnReport.Location = new Point(471, 0);
             btnReport.Name = "btnReport";
-            btnReport.Size = new Size(216, 59);
+            btnReport.Size = new Size(225, 100);
             btnReport.TabIndex = 1;
-            btnReport.Text = "Report Export";
             btnReport.UseVisualStyleBackColor = true;
             btnReport.Click += btnReport_Click;
             // 
             // btnAuto
             // 
+            btnAuto.BackgroundImage = Properties.Resources.auto;
+            btnAuto.BackgroundImageLayout = ImageLayout.Stretch;
             btnAuto.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAuto.Location = new Point(238, 0);
+            btnAuto.Location = new Point(3, 0);
             btnAuto.Name = "btnAuto";
-            btnAuto.Size = new Size(230, 59);
+            btnAuto.Size = new Size(232, 100);
             btnAuto.TabIndex = 2;
-            btnAuto.Text = "Auto Addition";
             btnAuto.UseVisualStyleBackColor = true;
             btnAuto.Click += btnAuto_Click;
             // 
             // btnAdd
             // 
+            btnAdd.BackColor = Color.Transparent;
+            btnAdd.BackgroundImage = Properties.Resources.STU;
+            btnAdd.BackgroundImageLayout = ImageLayout.Stretch;
             btnAdd.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdd.Location = new Point(0, 0);
+            btnAdd.Location = new Point(236, 0);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(232, 59);
+            btnAdd.Size = new Size(232, 100);
             btnAdd.TabIndex = 0;
-            btnAdd.Text = "Add Student";
-            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.UseVisualStyleBackColor = false;
             btnAdd.Click += btnAdd_Click;
             // 
             // MainPanel
             // 
+            MainPanel.Controls.Add(pictureBox1);
             MainPanel.Dock = DockStyle.Fill;
-            MainPanel.Location = new Point(0, 130);
+            MainPanel.Location = new Point(0, 179);
+            MainPanel.MinimumSize = new Size(699, 500);
             MainPanel.Name = "MainPanel";
-            MainPanel.Size = new Size(699, 396);
+            MainPanel.Size = new Size(699, 500);
             MainPanel.TabIndex = 2;
             MainPanel.Paint += MainPanel_Paint;
             // 
@@ -127,9 +150,11 @@
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ButtonPanel.ResumeLayout(false);
+            MainPanel.ResumeLayout(false);
             ResumeLayout(false);
         }
 

@@ -34,33 +34,43 @@
             // 
             // btnAutoS
             // 
-            btnAutoS.Location = new Point(261, 143);
+            btnAutoS.BackColor = Color.LightSteelBlue;
+            btnAutoS.BackgroundImageLayout = ImageLayout.Stretch;
+            btnAutoS.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAutoS.ForeColor = SystemColors.ButtonFace;
+            btnAutoS.Location = new Point(281, 150);
             btnAutoS.MinimumSize = new Size(50, 50);
             btnAutoS.Name = "btnAutoS";
-            btnAutoS.Size = new Size(170, 82);
+            btnAutoS.Size = new Size(214, 113);
             btnAutoS.TabIndex = 1;
-            btnAutoS.Text = "Add auto student";
-            btnAutoS.UseVisualStyleBackColor = true;
+            btnAutoS.Text = "Add Auto Student";
+            btnAutoS.UseVisualStyleBackColor = false;
             btnAutoS.Click += button1_Click;
             // 
             // successAuto
             // 
             successAuto.AutoSize = true;
-            successAuto.Location = new Point(192, 257);
-            successAuto.MinimumSize = new Size(300, 50);
+            successAuto.BackColor = Color.Transparent;
+            successAuto.ForeColor = SystemColors.ButtonHighlight;
+            successAuto.Location = new Point(117, 161);
+            successAuto.MinimumSize = new Size(90, 40);
             successAuto.Name = "successAuto";
-            successAuto.Size = new Size(300, 50);
+            successAuto.Size = new Size(90, 40);
             successAuto.TabIndex = 2;
             // 
             // UC_AutoAddition
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.PastedGraphic_2;
+            BackgroundImageLayout = ImageLayout.Stretch;
             Controls.Add(successAuto);
             Controls.Add(btnAutoS);
+            DoubleBuffered = true;
             MinimumSize = new Size(500, 100);
             Name = "UC_AutoAddition";
             Size = new Size(699, 396);
+            Load += UC_AutoAddition_Load;
             ResumeLayout(false);
             PerformLayout();
         }
